@@ -1,3 +1,9 @@
-#andre {
-    font-size: 200px;
+#test-title {
+    font-weight: bold;
+    font-size: 10px;
+    
+}
+
+.form {
+    width: 10%;
 }
