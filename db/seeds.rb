@@ -12464,7 +12464,7 @@ j=1
 
 end
 
-200.times do
+100.times do
     leads = Lead.new(
         contact_full_name: Faker::Name.name ,
         company_name: Faker::Company.name,
