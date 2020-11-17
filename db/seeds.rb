@@ -12122,7 +12122,7 @@ add = [
 ]
 
 #seed the address table
-150.times do
+50.times do
     index = rand(0..add.length-1)
     addresses = Address.new(
         type_of_address: addressType[rand(0..3)],
@@ -12286,13 +12286,13 @@ j=1
 
 
                 if typeBuilding[Btype] == "Residential"
-                    appartements = rand(10..300)
+                    appartements = rand(10..30)
 
                 elsif typeBuilding[Btype] == "Commercial" 
                     buisinesses = rand(3..50)
                             
                 else 
-                    occupants = rand(0..300)
+                    occupants = rand(0..30)
                     activity = rand(6..16)
                     companies = rand(3..50)
                 end
@@ -12464,7 +12464,7 @@ j=1
 
 end
 
-100.times do
+50.times do
     leads = Lead.new(
         contact_full_name: Faker::Name.name ,
         company_name: Faker::Company.name,
@@ -12482,71 +12482,71 @@ end
     leads.save
 end
 
-50.times do
+# 50.times do
 
-    random = rand(0..5)
-    contactName = Faker::Company.name
-    contact_email = Faker::Internet.email
-    leadDate = Faker::Date.between(from: '2020-10-15', to: '2020-11-11')
+#     random = rand(0..5)
+#     contactName = Faker::Company.name
+#     contact_email = Faker::Internet.email
+#     leadDate = Faker::Date.between(from: '2020-10-15', to: '2020-11-11')
 
-    leads = Lead.new(
-        contact_full_name: Faker::Name.name ,
-        company_name: contactName,
-        email: Faker::Internet.email ,
-        phone: Faker::PhoneNumber.cell_phone,
-        project_name: Faker::Company.catch_phrase,
-        project_description: Faker::Lorem.sentence,
-        department: typeBuilding[rand(0..3)],
-        message: Faker::Lorem.paragraphs,
-        created_at: leadDate
-        # attached_file:Faker::Types.rb_string 
+#     leads = Lead.new(
+#         contact_full_name: Faker::Name.name ,
+#         company_name: contactName,
+#         email: Faker::Internet.email ,
+#         phone: Faker::PhoneNumber.cell_phone,
+#         project_name: Faker::Company.catch_phrase,
+#         project_description: Faker::Lorem.sentence,
+#         department: typeBuilding[rand(0..3)],
+#         message: Faker::Lorem.paragraphs,
+#         created_at: leadDate
+#         # attached_file:Faker::Types.rb_string 
 
 
-    )
-    leads.save
-    if random < 4
-        # add customers with info from leads.
-        users = AdminUser.new(
-            email:contact_email,
-            password:"password",
-            password_confirmation:"password"
-        )
-        users.save
-        puts "new user : " + AdminUser.last[:id].to_s
+#     )
+#     leads.save
+#     if random < 4
+#         # add customers with info from leads.
+#         users = AdminUser.new(
+#             email:contact_email,
+#             password:"password",
+#             password_confirmation:"password"
+#         )
+#         users.save
+#         puts "new user : " + AdminUser.last[:id].to_s
 
-        technicalAthorityID = Employee.where(title: "technician").last[:id]
-        addressID = rand(1..Address.last[:id])
-        companyName = contactName
-        customerDate = Faker::Date.between(from: leadDate, to: Date.today)
-        companyContact = Faker::Name.name
-        companyPhone = Faker::PhoneNumber.cell_phone
-        # companyPhone = "test"
-        customers = Customer.new(
-            #user_id: userID[i],
-            customer_creation_date: customerDate,
-            company_name: companyName,
-            company_headquarter_address: Address.find(addressID)[:number_and_street].to_s + " " + Address.find(addressID)[:suite_or_apartment].to_s + " " + Address.find(addressID)[:city].to_s + " " + Address.find(addressID)[:postal_code].to_s + " " + Address.find(addressID)[:country].to_s,
+#         technicalAthorityID = Employee.where(title: "technician").last[:id]
+#         addressID = rand(1..Address.last[:id])
+#         companyName = contactName
+#         customerDate = Faker::Date.between(from: leadDate, to: Date.today)
+#         companyContact = Faker::Name.name
+#         companyPhone = Faker::PhoneNumber.cell_phone
+#         # companyPhone = "test"
+#         customers = Customer.new(
+#             #user_id: userID[i],
+#             customer_creation_date: customerDate,
+#             company_name: companyName,
+#             company_headquarter_address: Address.find(addressID)[:number_and_street].to_s + " " + Address.find(addressID)[:suite_or_apartment].to_s + " " + Address.find(addressID)[:city].to_s + " " + Address.find(addressID)[:postal_code].to_s + " " + Address.find(addressID)[:country].to_s,
             
-            full_name_company_contact: companyContact,
-            address_id: addressID,
-            company_contact_phone: companyPhone,
-            email_company_contact: contact_email,
-            admin_user_id: AdminUser.last[:id],
-            company_description: Faker::Company.industry,
+#             full_name_company_contact: companyContact,
+#             address_id: addressID,
+#             company_contact_phone: companyPhone,
+#             email_company_contact: contact_email,
+#             admin_user_id: AdminUser.last[:id],
+#             company_description: Faker::Company.industry,
 
-            employee_id:technicalAthorityID,
-            full_name_service_technical_authority: Employee.find(technicalAthorityID)[:first_name] + " " + Employee.find(technicalAthorityID)[:last_name] , 
+#             employee_id:technicalAthorityID,
+#             full_name_service_technical_authority: Employee.find(technicalAthorityID)[:first_name] + " " + Employee.find(technicalAthorityID)[:last_name] , 
         
-            technical_authority_phone: Employee.find(technicalAthorityID)[:phone_number],
-            technical_manager_email: Employee.find(technicalAthorityID)[:email]
-        )
-        customers.save
-        p "___________________________________"
-        p "customer save"
-        p "___________________________________"
+#             technical_authority_phone: Employee.find(technicalAthorityID)[:phone_number],
+#             technical_manager_email: Employee.find(technicalAthorityID)[:email]
+#         )
+#         customers.save
+#         p "___________________________________"
+#         p "customer save"
+#         p "___________________________________"
 
 
-    end
+#     end
 
 end
 
