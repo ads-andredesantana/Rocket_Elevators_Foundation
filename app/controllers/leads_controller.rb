@@ -29,32 +29,32 @@ class LeadsController < InheritedResources::Base
               filename: @lead.filename)
   end
 
-  def create
-    p params
-    p lead_params
-    @lead = Lead.new(lead_params)
-    sendgrid_email = (@lead.email).to_s
+  # def create
+  #   p params
+  #   p lead_params
+  #   @lead = Lead.new(lead_params)
+  #   sendgrid_email = (@lead.email).to_s
     
-    respond_to do |format|
+  #   respond_to do |format|
 
-      if @lead.save
+  #     if @lead.save
 
-        format.html { redirect_to root_path, notice: "Save process completed!" }
-        format.json { render json: @lead, status: :created, location: @lead }
+  #       format.html { redirect_to root_path, notice: "Save process completed!" }
+  #       format.json { render json: @lead, status: :created, location: @lead }
         
-        #--------------Sendgrid ---------------------
-        SendgridMailer.send(@lead.email.to_s, {"contactfullname": @lead.contact_full_name, "projectname": @lead.project_name}, 'd-a315317e3530459ead2863577e7ebf5a')
-        #--------------Sendgrid ---------------------
+  #       #--------------Sendgrid ---------------------
+  #       SendgridMailer.send(@lead.email.to_s, {"contactfullname": @lead.contact_full_name, "projectname": @lead.project_name}, 'd-a315317e3530459ead2863577e7ebf5a')
+  #       #--------------Sendgrid ---------------------
 
-      else
-        format.html { 
-            flash.now[:notice]="Save proccess coudn't be completed!" 
-            render :new 
-        }
-        format.json { render json: @lead.errors, status: :unprocessable_entity}
-      end
-    end
-  end
+  #     else
+  #       format.html { 
+  #           flash.now[:notice]="Save proccess coudn't be completed!" 
+  #           render :new 
+  #       }
+  #       format.json { render json: @lead.errors, status: :unprocessable_entity}
+  #     end
+  #   end
+  # end
 
 
   private
