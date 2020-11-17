@@ -1,7 +1,7 @@
 class Customer < ApplicationRecord
     belongs_to :admin_user
-    after_create :dropbox
-    after_update :dropbox
+    # after_create :dropbox
+    # after_update :dropbox
 
    # belongs_to :user, optional:true
 
