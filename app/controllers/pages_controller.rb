@@ -8,5 +8,8 @@ class PagesController < ApplicationController
     
     def corporate
     end
-    
+
+    def intervention
+    end
+
 end

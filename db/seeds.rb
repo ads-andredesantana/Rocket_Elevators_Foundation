@@ -20,6 +20,15 @@ AdminUser.create!(email: 'david.boutin@codeboxx.biz', password: 'password', pass
 AdminUser.create!(email: 'mathieu.lortie@codeboxx.biz', password: 'password', password_confirmation: 'password')
 AdminUser.create!(email: 'thomas.carrier@codeboxx.biz', password: 'password', password_confirmation: 'password')
 
+User2.create!(email: 'codeboxx@example.com', password: 'password', password_confirmation: 'password')
+User2.create!(email: 'nicolas.genest@codeboxx.biz', password: 'password', password_confirmation: 'password')
+User2.create!(email: 'nadya.fortier@codeboxx.biz', password: 'password', password_confirmation: 'password')
+User2.create!(email: 'martin.chantal@codeboxx.biz', password: 'password', password_confirmation: 'password')
+User2.create!(email: 'mathieu.houde@codeboxx.biz', password: 'password', password_confirmation: 'password')
+User2.create!(email: 'david.boutin@codeboxx.biz', password: 'password', password_confirmation: 'password') 
+User2.create!(email: 'mathieu.lortie@codeboxx.biz', password: 'password', password_confirmation: 'password')
+User2.create!(email: 'thomas.carrier@codeboxx.biz', password: 'password', password_confirmation: 'password')
+
 
 Employee.create(first_name:"Nicolas", last_name:"Genest", title:"CEO", email:"nicolas.genest@codeboxx.biz", admin_user_id:3, phone_number:Faker::PhoneNumber.cell_phone)
 Employee.create(first_name:"Nadya", last_name:"Fortier", title:"Director", email:"nadya.fortier@codeboxx.biz", admin_user_id:4, phone_number:Faker::PhoneNumber.cell_phone)
@@ -28,6 +37,8 @@ Employee.create(first_name:"Mathieu", last_name:"Houde", title:"Captain", email:
 Employee.create(first_name:"David", last_name:"Boutin", title:"Engineer", email:"david.boutin@codeboxx.biz", admin_user_id:7, phone_number:Faker::PhoneNumber.cell_phone)
 Employee.create(first_name:"Mathieu", last_name:"Lortie", title:"Engineer", email:"mathieu.lortie@codeboxx.biz", admin_user_id:8, phone_number:Faker::PhoneNumber.cell_phone)
 Employee.create(first_name:"Thomas", last_name:"Carrier", title:"Engineer", email:"thomas.carrier@codeboxx.biz", admin_user_id:9, phone_number:Faker::PhoneNumber.cell_phone)
+
+
 
 # employRan = rand(1..7)
 
@@ -12185,7 +12196,7 @@ i = 10
 j=1
 
 #create the customersgit
-100.times do
+50.times do
     
     eMail = Faker::Internet.email
 
@@ -12464,7 +12475,11 @@ j=1
 
 end
 
+<<<<<<< HEAD
 50.times do
+=======
+25.times do
+>>>>>>> Consolidation
     leads = Lead.new(
         contact_full_name: Faker::Name.name ,
         company_name: Faker::Company.name,
@@ -12482,7 +12497,11 @@ end
     leads.save
 end
 
+<<<<<<< HEAD
 50.times do
+=======
+25.times do
+>>>>>>> Consolidation
 
     random = rand(0..5)
     contactName = Faker::Company.name

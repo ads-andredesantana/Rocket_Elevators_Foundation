@@ -90,6 +90,18 @@
 											CONTACT
 										</a>
 									</li>
+										<li><!-- CONTACT -->
+										<a href="intervention">
+											INTERVENTION
+										</a>
+									</li>
+									<li><!-- login -->
+                                    <% if current_user2%>
+                                        <%= link_to 'SIGN OUT', destroy_user2_session_path, method: :delete%>
+                                            <%else%>
+                                        <%=link_to "LOGIN", new_user2_session_path%>
+                                        <%end%>
+                                    </li>
 								</ul>
 
 							</nav>

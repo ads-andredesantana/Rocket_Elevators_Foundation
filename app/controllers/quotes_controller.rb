@@ -35,22 +35,12 @@ class QuotesController < ApplicationController
     def create 
         @quote = Quote.new(params[:quote])
 
-        
-        
-
 
         respond_to do |format|
             @quote.update!(quote_params)
-            # p '------------------'
-            # p '------------------'
-            # p @quote
-            # p '------------------'
-            # p '------------------'
             if @quote.save 
                 format.html { redirect_to @quote, notice: "Save process completed!" }
                 format.json { render json: @quote, status: :created, location: @quote }
-
-
             else
                 format.html { 
                     flash.now[:notice]="Save proccess coudn't be completed!" 
