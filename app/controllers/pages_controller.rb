@@ -11,5 +11,5 @@ class PagesController < ApplicationController
 
     def intervention
     end
-    
+
 end

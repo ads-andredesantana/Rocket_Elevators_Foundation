@@ -145,7 +145,7 @@
 			<!-- /STEPS -->	
 
 
-
+        <%= form_tag newIntervention_path, :id=> 'intervention', multipart: true do %>
             <%# Form Title %>
             </br>
             <h2 class="text-center">Request an Intervention</h2>
@@ -203,7 +203,7 @@
                     <button type="submit" class="btn btn-danger btn-lg btn-red btn-block">Send</button>
                 </div>      
             </div>
-        
+        <% end %>      
 
 			<!-- FOOTER -->
 			<footer id="footer">

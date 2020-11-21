@@ -1,11 +1,13 @@
 class InterventionsController < ApplicationController
-end
- 
-private
-def createIntervention  
- 
+    # before_action :set_intervention, only: [:show, :edit, :update, :destroy]
+    # before_action :authenticate_user!
+    
+
+def newIntervention  
+    
     Intervention.create(
-        author: Employee.where(user_id: current_user.id).first.id,
+        # author: Employee.where(admin_user_id: current_admin_user.id).first.id,
+        author: params[:sel_customer],
         customer_id: params[:sel_customer],
         building_id: params[:sel_building],
         battery_id: params[:sel_battery],
@@ -15,5 +17,25 @@ def createIntervention
         elevator_id: params[:sel_elevator])
         
         redirect_to '/', notice: "Intervention created successfully"
-    
+        
+    end
+
+
+    def intervention_params
+        params.permit(
+                        :author,
+                        :customer_id,
+                        :building_id,
+                        :battery_id,
+                        :column_id,
+                        :report,
+                        :employee_id,
+                        :elevator_id
+        )
+    end
+
+
+
+
 end
+    

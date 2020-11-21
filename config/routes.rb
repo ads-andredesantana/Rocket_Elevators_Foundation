@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :user2s
   devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :employees
+  devise_for :users
   
   resources :elevators
   resources :batteries
@@ -33,6 +36,7 @@ Rails.application.routes.draw do
   # POST routes
   post 'quote/create' => 'quotes#create'
   post 'contact/create' => 'leads#create'
+  post 'newIntervention', to: "interventions#newIntervention"
   # post 'pages/twilio' => 'pages#twilio'
 end
 
