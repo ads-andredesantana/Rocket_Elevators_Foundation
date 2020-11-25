@@ -1,4 +1,18 @@
-# Week 9: Consolidation
+### Week 10: Quality and TDD
+
+Implementing a content delivery module in the information system with the following constraints:
+
+1. The content delivery module must be a reusable library. All the code concerning it must be in the 'lib' directory of your information system.
+1. The content management module must be entirely developed with the "red-green-refactor" method and all traces of the application of this method must be in the project repo.
+1. The technology to be used for the implementation of your module is Ruby on Rails and the TDD must be done using RSpec ( http://rspec.info )
+1. The module must be called ElevatorMedia and the class that implements your code must be called Streamer. 
+1. The Streamer class must contain a standard method getContent that returns html ( a string that contains valid html ready to be displayed on a web page ex: "<div>Interesting content</div>" )
+1. The html returned by getContent must come from the source of your choice on the web (api, websites, etc...). The marketing department expects creativity and originality from you!
+1. All the content is accessible via the getContent method (only one entry point for the streamer).
+1. Unit tests were added in 3 places in the existing code information system 
+
+
+### Week 9: Consolidation
 
 A new section of the Website named "Interventions" was added and is accessible from the menu after "Contact". Clicking on the new "Interventions" section will bring the visitor to a new view in the Rails application. Please note that this form must be visible and usable on a mobile phone. It is therefore imperative to keep the capacities offered by Bootstrap 4.
 
