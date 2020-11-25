@@ -11,6 +11,7 @@ Implementing a content delivery module in the information system with the follow
 1. All the content is accessible via the getContent method (only one entry point for the streamer).
 1. Unit tests were added in 3 places in the existing code information system 
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Week 9: Consolidation
 
