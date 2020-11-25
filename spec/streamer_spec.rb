@@ -17,6 +17,12 @@ describe ElevatorMedia: :Streamer, :type => :feature do
         expect(streamer).to respond_to(:getContent)        
     end
 
-
+    # Testing the Open Weather API
+    it 'got open-weather response' do
+        current_weather = streamer.getWeather['weather'][0]['main']
+        expect(current_weather).to_not eq(nil)
+        expect(current_weather).to be_a(String)
+        #puts current_weather
+    end
 
 end
