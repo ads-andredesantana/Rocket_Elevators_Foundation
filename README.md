@@ -1,6 +1,6 @@
 # Week 9: Consolidation
 
-
+A new section of the Website named "Interventions" was added and is accessible from the menu after "Contact". Clicking on the new "Interventions" section will bring the visitor to a new view in the Rails application. Please note that this form must be visible and usable on a mobile phone. It is therefore imperative to keep the capacities offered by Bootstrap 4.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 ### Week 8: Offering and Exposing a Service on the Internet
@@ -18,7 +18,7 @@ This week we needed to add a new factinterventions table to the postgres databas
 - JULIEN DUPONT "Member"
 
 
-# Week 7: Life is a Web Service
+### Week 7: Life is a Web Service
 
 To connect to admin section of the site the login page is https://vndaos.com/admin. on login a map page will be displayed (loading time can be long, sorry) IBM-watson will give you a general status of the company on audio automatically.
 
