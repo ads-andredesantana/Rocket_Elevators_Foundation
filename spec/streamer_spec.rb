@@ -1,0 +1,4 @@
+require 'streamer_spec'
+
+
+

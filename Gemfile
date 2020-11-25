@@ -128,3 +128,8 @@ gem 'ibm_watson'
 gem 'dropbox_api'
 
 gem 'rubocop-faker'
+
+# Run against the latest stable release
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
+end
