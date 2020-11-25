@@ -133,3 +133,6 @@ gem 'rubocop-faker'
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
 end
+
+# Gem Open Weather API
+gem 'open-weather'
