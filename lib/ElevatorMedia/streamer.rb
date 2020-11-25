@@ -5,12 +5,6 @@ module ElevatorMedia
     class Streamer
 
 
-        # Method to initialize the API key
-        def initialize
-            @Timer = 'http://worldtimeapi.org/api/timezone/America/Montreal'
-        end
-
-
         def getContent(type='weather')
             obj =  self.getWeather
             html="<div class='elevator-media-streamer-content'>#{obj}</div>"  
