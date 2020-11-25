@@ -1,9 +1,15 @@
-# TEAM WEB-2 - Week 4 & 5 Odyssey 
+# Week 9: Consolidation
 
-## Website URL: (http://rocket-elevators-trevor.tk/)
 
-# FALL-2020-TEAM-API-2 - Week 7 Odyssey 
-## Website URL: (https://vndaos.com/)
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+### Week 8: Offering and Exposing a Service on the Internet
+
+This week we needed to add a new factinterventions table to the postgres database. A new migration was made to create the table at this link https://github.com/week7VietEmanuellaJulienTrevor/Rocket_Elevators_API/blob/master/db_second/migrate/20201109185400_fact_intervention.rb and a rake task in the Rakefile called 'rake exporttest' https://github.com/week7VietEmanuellaJulienTrevor/Rocket_Elevators_API/blob/master/Rakefile was made to transfer the data between the relational database to the new table of the datawarehouse "vnpostgres".
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+### FALL-2020-TEAM-API-2 - Week 7 Odyssey 
+### Website URL: (https://vndaos.com/)
 ### TEAM MEMBERS:
 - VIET-NGA DAO "Team Leader"
 - TREVOR KITCHEN "Member"
@@ -11,12 +17,7 @@
 - ANDRE DE SANTANA "Member"
 - JULIEN DUPONT "Member"
 
-------------------------------------------------------------------------------------------------------------------------------------------------
-# Week 8: Offering and Exposing a Service on the Internet
 
-This week we needed to add a new factinterventions table to the postgres database. A new migration was made to create the table at this link https://github.com/week7VietEmanuellaJulienTrevor/Rocket_Elevators_API/blob/master/db_second/migrate/20201109185400_fact_intervention.rb and a rake task in the Rakefile called 'rake exporttest' https://github.com/week7VietEmanuellaJulienTrevor/Rocket_Elevators_API/blob/master/Rakefile was made to transfer the data between the relational database to the new table of the datawarehouse "vnpostgres".
-
-------------------------------------------------------------------------------------------------------------------------------------------------
 # Week 7: Life is a Web Service
 
 To connect to admin section of the site the login page is https://vndaos.com/admin. on login a map page will be displayed (loading time can be long, sorry) IBM-watson will give you a general status of the company on audio automatically.
@@ -71,6 +72,9 @@ Integration in /app/views/admin/map/_map.html.erb
 #### Please take note that all API's are on a trial version and may not work in the future, and all API keys were stored only on the server side.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+### TEAM WEB-2 - Week 4 & 5 Odyssey 
+
+#### Website URL: (http://rocket-elevators-trevor.tk/)
 
 ### Week 4
 This is our ruby on rails project for Rocket Elevators. The goal was to make an interactive website with an original static website made during Genesis and link it to a database that can store the Employee login data and the quote data in separate tables. The website has a back office in which an employee can login to access the data from quote.
@@ -253,3 +257,8 @@ FABIEN DIMITROV "Member"
 
 
 PUSHES have been made to trevor branch over the weekend however master Branch is left as it was on friday at deliverable creation
+
+
+
+
+
