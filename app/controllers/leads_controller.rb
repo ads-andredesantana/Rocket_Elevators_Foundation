@@ -34,7 +34,7 @@
             format.json { render json: @lead, status: :created, location: @lead }	
               
             #--------------Sendgrid ---------------------	
-            SendgridMailer.send(@lead.email.to_s, {"contactfullname": @lead.contact_full_name, "projectname": @lead.project_name}, 'd-e271b9b80fdb44ebbd1d722a38ad2b3e')	
+            SendgridMailer.send(@lead.email.to_s, {"contact_full_name": @lead.contact_full_name, "project_name": @lead.project_name}, 'd-e271b9b80fdb44ebbd1d722a38ad2b3e')	
             #--------------Sendgrid ---------------------	
           else	
             format.html { 	
@@ -50,3 +50,5 @@
           params.require(:leads).permit(:contact_full_name, :company_name, :email, :phone, :project_name, :project_description, :department, :message, :attached_file, :created_at)	
         end	
     end
+
+
