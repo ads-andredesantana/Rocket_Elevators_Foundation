@@ -12,6 +12,10 @@ RSpec.describe "Quotes", type: :controller do
         no_of_appartments: '500', 
         no_of_floors: '45', 
         no_of_basements: '4',
+        product_grade: 'Standard',
+        elevator_cost: '68085.00',
+        installation_cost: '6808.50',
+        total_cost: '74893.50'
         )
 
     it 'should be a Quote' do
@@ -39,14 +43,30 @@ RSpec.describe "Quotes", type: :controller do
     end
 
     it 'should contain a no_of_appartments' do
-        expect(newQuote.no_of_appartments).to include('500')
+        expect(newQuote.no_of_appartments).to be(500)
     end
 
     it 'should contain a no_of_floors' do
-        expect(newQuote.no_of_floors).to include('45')
+        expect(newQuote.no_of_floors).to be(45)
     end
 
     it 'should contain a no_of_basements' do
-        expect(newLead.no_of_basements).to include('4')
+        expect(newQuote.no_of_basements).to be(4)
+    end
+
+    it 'should contain a product_grade' do
+        expect(newQuote.product_grade).to include('Standard')
+    end
+
+    it 'should contain a elevator_cost' do
+        expect(newQuote.elevator_cost).to include('68085.00')
+    end
+
+    it 'should contain an installation_cost' do
+        expect(newQuote.installation_cost).to include('6808.50')
+    end
+
+    it 'should contain a total_cost' do
+        expect(newQuote.total_cost).to include('74893.50')
     end
 end
