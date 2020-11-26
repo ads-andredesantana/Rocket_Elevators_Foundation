@@ -1,21 +1,6 @@
 require 'rails_helper'
 require 'spec_helper'
-require 'ElevatorMedia/streamer'
 
-
-
-# RSpec.describe LeadsController, type: :controller do
-
-#     describe 'Contact Form', type: :feature do
-#         it 'Is filled and permit parameters' do
-#             visit index_path
-#             result = expect(page).to have_current_path(index_path)
-#             puts "    Are we on the index page? : #{result}"
-#             post :create, params: { leads: { contact_full_name: 'Testing', company_name: 'Testing APP', email: 'adsn@testing.com', phone: '514-473-3219', projectname: 'Rocket', project_description: 'elevator', department: 'Sales', message: '12345' } }
-#             expect(response.location).to match(index_path)
-#         end
-#     end
-# end
 
 RSpec.describe "Leads", type: :controller do
     newLead = Lead.create(
