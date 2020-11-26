@@ -11,6 +11,8 @@ Implementing a content delivery module in the information system with the follow
 1. All the content is accessible via the getContent method (only one entry point for the streamer).
 1. Unit tests were added in 3 places in the existing code information system 
 
+* The tests were performed on streamer_spec.rb, battery.rb, leads_request_spec.rb and quotes_request_spec.rb
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Week 9: Consolidation
