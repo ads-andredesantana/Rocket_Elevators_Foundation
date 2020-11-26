@@ -22,7 +22,7 @@ describe ElevatorMedia: :Streamer, :type => :feature do
         current_weather = streamer.getWeather['weather'][0]['main']
         expect(current_weather).to_not eq(nil)
         expect(current_weather).to be_a(String)
-        #puts current_weather
+        puts current_weather
     end
 
 end
