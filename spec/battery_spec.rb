@@ -17,9 +17,9 @@ RSpec.describe "Unit Tests to Battery Class" do
 
     describe Battery do
         describe "Associations" do
+            it "belongs_to building" do
 
-            
-
+            end
         end 
     end
 
