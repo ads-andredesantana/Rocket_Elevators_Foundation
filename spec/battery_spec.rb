@@ -18,7 +18,8 @@ RSpec.describe "Unit Tests to Battery Class" do
     describe Battery do
         describe "Associations" do
             it "belongs_to building" do
-
+                assc = described_class.reflect_on_association(:building)
+                expect(assc.macro).to eq :belongs_to
             end
         end 
     end
