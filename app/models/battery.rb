@@ -7,9 +7,4 @@ class Battery < ApplicationRecord
     end
     belongs_to :customer
     
-    
-
-        
-
-    
 end

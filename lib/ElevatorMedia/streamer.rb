@@ -13,7 +13,7 @@ module ElevatorMedia
 
         # Method to get the weather of Montreal
         def getWeather
-            options = { units: "metric", APPID: "877cd1e8cbf3bb9fcc37558528e903e6" }
+            options = { units: "metric", APPID: ENV['open_weather']}
             OpenWeather::Current.city_id(6077243, options)
         end
     end  
