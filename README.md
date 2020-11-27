@@ -3,7 +3,7 @@
 
 A serie of tests were made in the Rocket_Elevators_Foundation APP using RSpec ( http://rspec.info ). To run the tests you just need to put in your command line: bundle exec rspec --format documentation
 
-Here are the tests effectuated: 
+Here are the tests performed: 
 
 1. A module called ElevatorMedia and the class Streamer were used to implements the code. 
 1. The Streamer class contains a standard method getContent that returns an html ( a string that contains valid html ready to be displayed on a web page ex: "<div>Interesting content</div>" ).
