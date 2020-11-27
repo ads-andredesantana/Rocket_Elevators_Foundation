@@ -1,7 +1,8 @@
 ### Week 10: Quality and TDD
 
 
-A serie of tests were made in the Rocket_Elevators_Foundation APP using RSpec ( http://rspec.info ). To run the tests you just need to put in your command line: bundle exec rspec --format documentation
+A serie of tests were made in the Rocket_Elevators_Foundation APP using RSpec ( http://rspec.info ). To run the tests you just need to put in your command line: 
+* bundle exec rspec --format documentation
 
 Here are the tests performed: 
 
