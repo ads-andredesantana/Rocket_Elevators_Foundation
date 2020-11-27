@@ -6,7 +6,7 @@ A serie of tests were made in the Rocket_Elevators_Foundation APP using RSpec ( 
 Here are the tests performed: 
 
 1. A module called ElevatorMedia and the class Streamer were used to implements the code. 
-1. The Streamer class contains a standard method getContent that returns an html ( a string that contains valid html ready to be displayed on a web page ex: "<div>Interesting content</div>").
+1. The Streamer class contains a standard method getContent that returns an html ( a string that contains valid html ready to be displayed on a web page ex: ``` "<div>Interesting content</div>"```).
 1. The html returned by getContent comes from the Open Weather API: https://openweathermap.org/
 1. All the content is accessible via the getContent method (only one entry point was created for the streamer).
 1. Unit tests were added in 3 places in the existing code information system:
