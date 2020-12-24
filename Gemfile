@@ -136,3 +136,5 @@ end
 
 # Gem Open Weather API
 gem 'open-weather'
+
+gem 'newrelic_rpm'
