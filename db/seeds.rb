@@ -12475,11 +12475,7 @@ j=1
 
 end
 
-<<<<<<< HEAD
-50.times do
-=======
 25.times do
->>>>>>> Consolidation
     leads = Lead.new(
         contact_full_name: Faker::Name.name ,
         company_name: Faker::Company.name,
@@ -12497,11 +12493,7 @@ end
     leads.save
 end
 
-<<<<<<< HEAD
-50.times do
-=======
 25.times do
->>>>>>> Consolidation
 
     random = rand(0..5)
     contactName = Faker::Company.name
